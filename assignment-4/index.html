@@ -1,0 +1,259 @@
+<DOCTYPE! html>
+<html data-xlabs-extension="1" data-xlabs-extension-version="2.6.1">
+  <head>
+    <meta charset="UTF-8">
+    <title>Course Questionnaire</title>
+    <style>
+      * {font-family: arial}
+      legend {font-size: 20px}
+      img, figure, figcaption, table {text-align:center;font-style:italic;margin:auto}
+      div {width:32%;display:inline-block;vertical-align:text-top;}
+      table, td, th {border:2px solid black; border-collapse: collapse; padding: 5px}
+
+    </style>
+    <style type="text/css">
+    .backpack.dropzone {font-family: 'SF UI Display', 'Segoe UI'; font-size: 15px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 250px; height: 150px; font-weight: lighter; color: white; will-change: right; z-index: 2147483647; bottom: 20%; background: #333; position: fixed; user-select: none; transition: left .5s, right .5s; right: 0px; }
+    .backpack.dropzone .animation {height: 80px; width: 250px; background:url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/hoverstate.png")left center; }
+  .backpack.dropzone .title::before {
+    content: 'Save to'; }
+  .backpack.dropzone.closed {
+    right: -250px; }
+  .backpack.dropzone.hover .animation {
+    animation: sxt-play-anim-hover 0.91s steps(21);
+    animation-fill-mode: forwards;
+    background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/hoverstate.png") left center; }
+
+@keyframes sxt-play-anim-hover {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: -5250px; } }
+  .backpack.dropzone.saving .title::before {
+    content: 'Saving to'; }
+  .backpack.dropzone.saving .animation {
+    background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/saving_loop.png") left center;
+    animation: sxt-play-anim-saving steps(59) 2.46s infinite; }
+
+@keyframes sxt-play-anim-saving {
+  100% {
+    background-position: -14750px; } }
+  .backpack.dropzone.saved .title::before {
+    content: 'Saved to'; }
+  .backpack.dropzone.saved .animation {
+    background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/saved.png") left center;
+    animation: sxt-play-anim-saved steps(20) 0.83s forwards; }
+
+@keyframes sxt-play-anim-saved {
+  100% {
+    background-position: -5000px; } }
+</style>
+<style type="text/css">
+#xLabsCanvas{pointer-events:none;top:0;left:0;position:fixed;z-index:2147483646;}#xLabsCanvas.allow-pointer{pointer-events:auto;}
+</style>
+  </head>
+
+  <body>
+    <header>
+      <!-- Title Information -->
+      <img src="https://media-ed-online.github.io/intro-web-dev/img/logonav.png" alt="Media Arts Logo" title="Logo" width="100" height="100" style="float: left;"/>
+      <h1>Course Questionnaire</h1>
+      <p>Thank you for your interest in our course, <cite>Intro to Web Design!</cite><br/>
+        Please continue your registration by filling out these areas:</p>
+    </header>
+
+    <main>
+      <!-- Step 1 -->
+      <form action="http://www.example.com/register.php"method=""
+
+      <!-- Part 1: Basic Info -->
+      <fieldset>
+        <legend>Contact Details</legend>
+        <!-- Step 2 (Name) -->
+        <p>Name:
+          <input type="text" name="name" id="name-first" />
+          <input type="text" name="name" id="name-middle" />
+          <input type="text" name="name" id="name-last" />
+        </p>
+        <!-- Step 3 (E-mail) -->
+        <p>E-mail:
+          <input type="text" e-mail="e-mail" id="e-mail" />
+        </p>
+
+        <!-- Step 4 (Date) -->
+        <p>
+          Date of Birth:
+          <input id="" name="" placeholder="mm/dd/yyyy" type=date>
+        </p>
+
+
+        <p>Have you taken a web design course before?</p>
+            <input id="yes" type="radio" name="prev-course" value="y">
+              <label for="yes">Yes</label>
+              <input id="no" type="radio" name="prev-course" value="y">
+                <label for="no">No</label>
+              </fieldset>
+
+              <br />
+
+
+      <!-- Part : Previous Experience -->
+      <fieldset>
+        <legend>Previous Experience</legend>
+        <!-- BROWSERS --><div id="browsers">
+          <figure>
+            <img src="./images/browsers.png" alt="Image of a browser" title="Broswer Icon" width="100" height="100" />
+            <figcaption>Wowsers, Browsers</figcaption>
+          </figure>
+          <p>What is your preferred browser?</p>
+          <p>
+            <i>Choose one:</i>
+          </p>
+          <input type="radio" name="Chrome" value="Chrome" checked="checked">
+          Chrome
+          </br>
+          <input type="radio" name="Firefox" value="Firefox" unchecked="unchecked">
+          Firefox
+          </br>
+          <input type="radio" name="Internet Explorer" value="Internet Explorer" unchecked="unchecked">
+          Internet Explorer
+          </br>
+          <input type="radio" name="Safari" value="Safari" unchecked="unchecked">
+          Safari
+          </br>
+          <input type="radio" name="Opera" value="Opera" unchecked="unchecked">
+          Opera
+          </br>
+          <input type="radio" name="Microsoft Edge" value="Microsoft Edge" unchecked="unchecked">
+          Microsoft Edge
+          </br>
+          <input type="radio" name="Other" value="Other" unchecked="unchecked">
+          Other
+          </br>
+        </div>
+
+        <!-- LANGUAGES --><div id="languages">
+          <figure>
+            <img src="./images/languages.png" alt="a symbol for Computer languages" title="languages" width="100" height="100">
+            <br>
+            <figcaption>
+              <em>Chatting in code</em>
+            </figcaption>
+          </figure>
+
+          <p>What languages are you familiar with?</p>
+          <p><i>Choose one or more:</i></p>
+        </p>
+        <input name="languages" value="HTML" type="checkbox">
+        HTML
+        </br>
+        <input name="languages" value="CSS" type="checkbox">
+        CSS
+        </br>
+        <input name="languages" value="JavaScript" type="checkbox">
+        JavaScript
+        </br>
+        <input name="languages" value="PHP" type="checkbox">
+        PHP
+        </br>
+        <input name="languages" value="Ruby" type="checkbox">
+        Ruby
+        </br>
+        <input name="languages" value="Python" type="checkbox">
+        Python
+        </br>
+      </div>
+
+
+        <!-- SHORT-ANSWER--><div id="short-answer">
+        <figure>
+        <img src="./images/experience.png" alt="a crossed wrench and screwdriver over a computer monitor" title="experience" width="100" height="100">
+        <br>
+        <figcaption>
+          <em>In the Know?</em>
+        </figcaption>
+      </figure>
+      <br>
+        <p>Introduce yourself!</p>
+
+          <p>“Hi! I'm a
+            <select name="experience-level">
+            <option value="guppy">guppy</option>
+            <option value="beginner">beginner</option>
+            <option value="novice" selected="selected">novice</option>
+            <option value="journeyman">journeyman</option>
+            <option value="expert">expert</option>
+            <option value="wizard">wizard</option>
+          </select>
+            "web designer or developer.”</p>
+
+          <p>“Last year, I spent
+            <input type="numbers" name="experience-time"
+            id="experience-time" placeholder="##" min="0" max="12" size="2">
+            "months studying or working in this field.”</p>
+
+
+            <textarea name="I think my most difficult task will be..." cols="30" rows="4">I think my most difficult task will be...
+              </textarea>
+        </div>
+        <br>
+      </fieldset>
+      <table>
+   <tbody><tr>
+      <th>Offerings and Availability</th>
+      <th scope="col">Spring Semester</th>
+      <th scope="col">Summer Session</th>
+      <th scope="col">Autumn Semester</th>
+      <th scope="col">Winter Session</th>
+      <th scope="col">Special Session</th>
+   </tr>
+   <tr>
+      <th scope="row">Times</th>
+      <td>M, W 12:00-2:00</td>
+      <td>F 5:30-9:30</td>
+      <td>M, W 12:00-2:00</td>
+      <td>F 12:00-4:00</td>
+      <td>TBA</td>
+
+   </tr>
+   <tr>
+      <th scope="row">Seats</th>
+      <td>12/60</td>
+      <td>FULL</td>
+      <td>FULL</td>
+      <td>2/60</td>
+      <td>0/60</td>
+
+   </tr>
+
+
+</tbody></table>
+<p>Username:
+    <input type="text" name="username" required="required" maxlength="30">
+    <br>
+    <input type="checkbox" name="newsletter" value="<em>Yes! Sign Me up for weekly e-mail alerts!!!</em>" checked="checked">
+    <input type="submit" value="Subscribe">
+    <input type="image" src="./images/registration-station.jpg" alt="register" width="500" height="333">
+
+  </p>
+
+
+      <br />
+
+
+      <!-- Part 3: Course Offerings -->
+      <!-- Steps 13-18 -->
+
+
+        <!-- Step 19 -->
+        <table>
+
+        </table>
+        <p>Yes! Sign me up for weekly e-mail alerts.
+
+        </p>
+
+    </form>
+    </main>
+
+  </body>
+</html>
